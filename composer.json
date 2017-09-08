@@ -1,0 +1,17 @@
+{
+    "name": "kwedrowicz/job-communication",
+    "description": "Library includes communication interfaces between job microservices",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Krzysztof Wędrowicz",
+            "email": "krzysztof.wedrowicz@espeo.eu"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-0" : {
+            "KWedrowicz\\JobCommunication" : "src"
+        }
+    }
+}
