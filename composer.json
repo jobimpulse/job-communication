@@ -11,7 +11,7 @@
     "require": {},
     "autoload": {
         "psr-4" : {
-            "KWedrowicz\\JobCommunication" : "src"
+            "KWedrowicz\\JobCommunication\\" : "src"
         }
     }
 }
