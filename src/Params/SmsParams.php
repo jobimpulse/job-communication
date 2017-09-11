@@ -4,7 +4,7 @@
 namespace KWedrowicz\JobCommunication\Params;
 
 
-class SMSParams implements ParamsInterface
+class SmsParams implements ParamsInterface
 {
     private $phone;
     private $content;

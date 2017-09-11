@@ -4,11 +4,11 @@ declare(strict_types=1);
 
 namespace KWedrowicz\JobCommunication\Message;
 
-use KWedrowicz\JobCommunication\Params\SMSParams;
+use KWedrowicz\JobCommunication\Params\SmsParams;
 
-class SendSMS extends Message
+class SendSms extends Message
 {
-    public function __construct(SMSParams $params)
+    public function __construct(SmsParams $params)
     {
         $this->params = $params;
         parent::__construct();
