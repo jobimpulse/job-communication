@@ -8,8 +8,6 @@ use KWedrowicz\JobCommunication\Params\SMSParams;
 
 class SendSMS extends Message
 {
-    const NAME = 'send_sms';
-
     public function __construct(SMSParams $params)
     {
         $this->params = $params;
@@ -17,6 +15,6 @@ class SendSMS extends Message
 
     public function getName(): string
     {
-        return self::NAME;
+        return MessageType::SEND_SMS;
     }
 }

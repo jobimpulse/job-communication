@@ -6,7 +6,6 @@ use KWedrowicz\JobCommunication\Params\MailParams;
 
 class SendMail extends Message
 {
-    const NAME = 'send_mail';
 
     public function __construct(MailParams $params)
     {
@@ -15,6 +14,6 @@ class SendMail extends Message
 
     public function getName(): string
     {
-        return self::NAME;
+        return MessageType::SEND_MAIL;
     }
 }
