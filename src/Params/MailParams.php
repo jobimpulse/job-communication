@@ -11,7 +11,7 @@ class MailParams implements ParamsInterface
     private $content;
     private $attachments;
 
-    public function __construct(string $address, string $title, string $content, array $attachments)
+    public function __construct(string $address, string $title, string $content, array $attachments = [])
     {
         $this->address = $address;
         $this->title = $title;
