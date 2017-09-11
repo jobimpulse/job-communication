@@ -31,4 +31,6 @@ abstract class Message implements MessageInterface
     }
 
    abstract public function getName(): string;
+
+   abstract public function getChannel(): string;
 }

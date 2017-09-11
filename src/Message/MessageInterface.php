@@ -12,5 +12,7 @@ interface MessageInterface
 
     public function getName(): string;
 
+    public function getChannel(): string;
+
     public function getParams(): ParamsInterface;
 }

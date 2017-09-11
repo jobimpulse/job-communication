@@ -17,4 +17,9 @@ class SendMail extends Message
     {
         return MessageType::SEND_MAIL;
     }
+
+    public function getChannel(): string
+    {
+        return MessageChannel::SEND;
+    }
 }

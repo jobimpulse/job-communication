@@ -18,4 +18,9 @@ class SendSMS extends Message
     {
         return MessageType::SEND_SMS;
     }
+
+    public function getChannel(): string
+    {
+        return MessageChannel::SEND;
+    }
 }
