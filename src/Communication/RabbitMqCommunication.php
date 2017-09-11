@@ -27,7 +27,7 @@ class RabbitMqCommunication implements CommunicationInterface
 
     public function send(MessageInterface $message): void
     {
-        $this->channel->queue_declare($message->getChannel(), false, false, false, false);
+        $this->channel->queue_declare($message->getChannel(), false, true, false, false);
         $msg = new AMQPMessage(serialize($message));
         $this->channel->basic_publish($msg, '', $message->getChannel());
     }
