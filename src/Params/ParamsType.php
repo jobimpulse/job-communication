@@ -4,7 +4,8 @@ declare(strict_types=1);
 
 namespace KWedrowicz\JobCommunication\Params;
 
-interface ParamsInterface
+class ParamsType
 {
-    public function getType(): string;
+    const MAIL = 'mail';
+    const SMS = 'sms';
 }

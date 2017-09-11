@@ -31,4 +31,9 @@ class SMSParams implements ParamsInterface
     {
         return $this->sender;
     }
+
+    public function getType(): string
+    {
+        return ParamsType::SMS;
+    }
 }

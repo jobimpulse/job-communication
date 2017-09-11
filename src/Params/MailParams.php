@@ -38,4 +38,9 @@ class MailParams implements ParamsInterface
     {
         return $this->attachments;
     }
+
+    public function getType(): string
+    {
+        return ParamsType::MAIL;
+    }
 }
