@@ -10,6 +10,7 @@ class SendMail extends Message
     public function __construct(MailParams $params)
     {
         $this->params = $params;
+        parent::__construct();
     }
 
     public function getName(): string

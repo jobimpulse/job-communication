@@ -11,6 +11,7 @@ class SendSMS extends Message
     public function __construct(SMSParams $params)
     {
         $this->params = $params;
+        parent::__construct();
     }
 
     public function getName(): string

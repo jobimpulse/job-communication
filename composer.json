@@ -8,7 +8,9 @@
             "email": "krzysztof.wedrowicz@espeo.eu"
         }
     ],
-    "require": {},
+    "require": {
+        "ramsey/uuid": "^3.7"
+    },
     "autoload": {
         "psr-4" : {
             "KWedrowicz\\JobCommunication\\" : "src"
