@@ -10,4 +10,5 @@ class MessageType
     const SEND_SMS = 'send_sms';
     const MAIL_SENT = 'mail_sent';
     const SMS_SENT = 'sms_sent';
+    const MAIL_NOT_SENT = 'mail_not_sent';
 }
