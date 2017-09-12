@@ -8,7 +8,7 @@ use KWedrowicz\JobCommunication\Params\MailParams;
 
 class MailSent extends EventMessage
 {
-    public function __construct(MailParams $params, $uuid = null)
+    public function __construct(MailParams $params, ?string $uuid = null)
     {
         $this->params = $params;
         parent::__construct($uuid);

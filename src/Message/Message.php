@@ -14,7 +14,7 @@ abstract class Message implements MessageInterface
     /** @var ParamsInterface */
     protected $params;
 
-    public function getUuid(): string
+    public function getUuid(): ?string
     {
         return $this->uuid;
     }

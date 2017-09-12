@@ -8,7 +8,7 @@ use KWedrowicz\JobCommunication\Params\ParamsInterface;
 
 interface MessageInterface
 {
-    public function getUuid(): string;
+    public function getUuid(): ?string;
 
     public function getName(): string;
 

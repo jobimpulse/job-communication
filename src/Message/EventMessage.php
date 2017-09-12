@@ -8,7 +8,7 @@ use Ramsey\Uuid\Uuid;
 
 abstract class EventMessage extends Message
 {
-    public function __construct(string $uuid = null)
+    public function __construct(?string $uuid = null)
     {
         if (!$uuid) {
             $uuid = Uuid::uuid4()->toString();
