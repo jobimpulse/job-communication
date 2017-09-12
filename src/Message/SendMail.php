@@ -1,12 +1,13 @@
 <?php
 
+declare(strict_types=1);
+
 namespace KWedrowicz\JobCommunication\Message;
 
 use KWedrowicz\JobCommunication\Params\MailParams;
 
 class SendMail extends Message
 {
-
     public function __construct(MailParams $params)
     {
         $this->params = $params;
