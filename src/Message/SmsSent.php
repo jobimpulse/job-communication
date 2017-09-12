@@ -6,21 +6,21 @@ namespace KWedrowicz\JobCommunication\Message;
 
 use KWedrowicz\JobCommunication\Params\SmsParams;
 
-class SendSms extends CommandMessage
+class SmsSent extends EventMessage
 {
-    public function __construct(SmsParams $params)
+    public function __construct(SmsParams $params, $uuid = null)
     {
         $this->params = $params;
-        parent::__construct();
+        parent::__construct($uuid);
     }
 
     public function getName(): string
     {
-        return MessageType::SEND_SMS;
+        return MessageType::SMS_SENT;
     }
 
     public function getChannel(): string
     {
-        return MessageChannel::SEND;
+        return MessageChannel::SENT;
     }
 }

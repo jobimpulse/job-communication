@@ -8,4 +8,6 @@ class MessageType
 {
     const SEND_MAIL = 'send_mail';
     const SEND_SMS = 'send_sms';
+    const MAIL_SENT = 'mail_sent';
+    const SMS_SENT = 'sms_sent';
 }

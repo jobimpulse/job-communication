@@ -7,4 +7,5 @@ namespace KWedrowicz\JobCommunication\Message;
 class MessageChannel
 {
     const SEND = 'send';
+    const SENT = 'sent';
 }
