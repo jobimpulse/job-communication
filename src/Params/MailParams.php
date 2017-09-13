@@ -10,13 +10,21 @@ class MailParams implements ParamsInterface
     private $title;
     private $content;
     private $attachments;
+    private $provider;
     private $sentAt;
 
-    public function __construct(string $address, string $title, string $content, array $attachments = [], ?\DateTime $sentAt = null)
-    {
+    public function __construct(
+        string $address,
+        string $title,
+        string $content,
+        string $provider = 'default',
+        array $attachments = [],
+        ?\DateTime $sentAt = null
+    ) {
         $this->address = $address;
         $this->title = $title;
         $this->content = $content;
+        $this->provider = $provider;
         $this->attachments = $attachments;
         $this->sentAt = $sentAt;
     }
@@ -34,6 +42,11 @@ class MailParams implements ParamsInterface
     public function getContent(): string
     {
         return $this->content;
+    }
+
+    public function getProvider(): string
+    {
+        return $this->provider;
     }
 
     public function getAttachments(): array
