@@ -10,22 +10,22 @@ class MailParams implements ParamsInterface
     private $title;
     private $content;
     private $attachments;
-    private $provider;
     private $sentAt;
+    private $provider;
 
     public function __construct(
         string $address,
         string $title,
         string $content,
-        string $provider = 'default',
         array $attachments = [],
+        string $provider = 'default',
         ?\DateTime $sentAt = null
     ) {
         $this->address = $address;
         $this->title = $title;
         $this->content = $content;
-        $this->provider = $provider;
         $this->attachments = $attachments;
+        $this->provider = $provider;
         $this->sentAt = $sentAt;
     }
 
