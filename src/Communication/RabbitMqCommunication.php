@@ -31,4 +31,14 @@ class RabbitMqCommunication implements CommunicationInterface
         $msg = new AMQPMessage(serialize($message));
         $this->channel->basic_publish($msg, '', $message->getChannel());
     }
+
+    public function purge(string $queue): void
+    {
+        $this->channel->queue_purge($queue);
+    }
+
+    public function getOne(string $queue): MessageInterface
+    {
+        return unserialize($this->channel->basic_get($queue), array('allowed_classes' => true));
+    }
 }
