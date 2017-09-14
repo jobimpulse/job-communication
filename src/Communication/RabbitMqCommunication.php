@@ -39,6 +39,8 @@ class RabbitMqCommunication implements CommunicationInterface
 
     public function getOne(string $queue): MessageInterface
     {
-        return unserialize($this->channel->basic_get($queue), array('allowed_classes' => true));
+        $msg = $this->channel->basic_get($queue);
+
+        return unserialize($msg->body, array('allowed_classes' => true));
     }
 }
