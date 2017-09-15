@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace KWedrowicz\JobCommunication\Communication;
 
+use KWedrowicz\JobCommunication\Exception\NoMessageException;
 use KWedrowicz\JobCommunication\Message\MessageInterface;
 use PhpAmqpLib\Connection\AMQPStreamConnection;
 use PhpAmqpLib\Message\AMQPMessage;
@@ -40,6 +41,9 @@ class RabbitMqCommunication implements CommunicationInterface
     public function getOne(string $queue): MessageInterface
     {
         $msg = $this->channel->basic_get($queue);
+        if(!$msg) {
+            throw new NoMessageException();
+        }
 
         return unserialize($msg->body, array('allowed_classes' => true));
     }
