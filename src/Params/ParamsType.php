@@ -8,4 +8,5 @@ class ParamsType
 {
     const MAIL = 'mail';
     const SMS = 'sms';
+    const USER  = 'user';
 }
