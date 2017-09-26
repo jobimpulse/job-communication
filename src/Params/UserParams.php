@@ -6,6 +6,7 @@ namespace KWedrowicz\JobCommunication\Params;
 
 class UserParams implements ParamsInterface
 {
+    private $id;
     private $firstName;
     private $lastName;
 
@@ -14,10 +15,16 @@ class UserParams implements ParamsInterface
         return ParamsType::USER;
     }
 
-    public function __construct(string $firstName, string $lastName)
+    public function __construct(int $id, string $firstName, string $lastName)
     {
+        $this->id = $id;
         $this->firstName = $firstName;
         $this->lastName = $lastName;
+    }
+
+    public function getId(): int
+    {
+        return $this->id;
     }
 
     public function getFirstName(): string
