@@ -14,7 +14,12 @@ class UserParams implements ParamsInterface
     private $phoneNumber;
     private $pesel;
     private $city;
+    private $accountStatus;
+    private $recruitmentIds;
     private $lastLoginAt;
+    private $accountTypes;
+    private $userGroups;
+
 
     public function getType(): string
     {
@@ -30,7 +35,11 @@ class UserParams implements ParamsInterface
         string $phoneNumber,
         string $pesel,
         string $city,
-        ?string $lastLoginAt
+        string $accountStatus,
+        array $recruitmentIds,
+        ?string $lastLoginAt,
+        array $accountTypes,
+        array $userGroups
     ) {
         $this->id = $id;
         $this->firstName = $firstName;
@@ -40,7 +49,11 @@ class UserParams implements ParamsInterface
         $this->phoneNumber = $phoneNumber;
         $this->pesel = $pesel;
         $this->city = $city;
+        $this->accountStatus = $accountStatus;
+        $this->recruitmentIds = $recruitmentIds;
         $this->lastLoginAt = $lastLoginAt;
+        $this->accountTypes = $accountTypes;
+        $this->userGroups = $userGroups;
     }
 
     public function getId(): int
@@ -86,5 +99,25 @@ class UserParams implements ParamsInterface
     public function getLastLoginAt(): ?string
     {
         return $this->lastLoginAt;
+    }
+
+    public function getAccountStatus(): string
+    {
+        return $this->accountStatus;
+    }
+
+    public function getRecruitmentIds(): array
+    {
+        return $this->recruitmentIds;
+    }
+
+    public function getAccountTypes(): array
+    {
+        return $this->accountTypes;
+    }
+
+    public function getUserGroups(): array
+    {
+        return $this->userGroups;
     }
 }
