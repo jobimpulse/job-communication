@@ -32,9 +32,9 @@ class UserParams implements ParamsInterface
         string $lastName,
         string $login,
         string $email,
-        string $phoneNumber,
-        string $pesel,
-        string $city,
+        ?string $phoneNumber,
+        ?string $pesel,
+        ?string $city,
         string $accountStatus,
         array $recruitmentIds,
         ?string $lastLoginAt,
@@ -81,17 +81,17 @@ class UserParams implements ParamsInterface
         return $this->email;
     }
 
-    public function getPhoneNumber(): string
+    public function getPhoneNumber(): ?string
     {
         return $this->phoneNumber;
     }
 
-    public function getPesel(): string
+    public function getPesel(): ?string
     {
         return $this->pesel;
     }
 
-    public function getCity(): string
+    public function getCity(): ?string
     {
         return $this->city;
     }
