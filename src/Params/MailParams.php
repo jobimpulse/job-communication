@@ -18,7 +18,7 @@ class MailParams implements ParamsInterface
         string $title,
         string $content,
         array $attachments = [],
-        string $provider = 'default',
+        string $provider = MailProvidersType::BASIC,
         ?\DateTime $sentAt = null
     ) {
         $this->address = $address;
